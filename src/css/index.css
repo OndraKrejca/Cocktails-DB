@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+ Spinner
+*/
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #c8976c;
+  animation: spinner 0.6s linear infinite;
+}
+
+.alert__msg {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root .nav__cont {
+  padding: 0.8rem 1.5rem;
+  position: relative;
+}
+#root .nav__cont ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 2rem;
+}
+#root .nav__cont ul li {
+  list-style-type: none;
+  display: block;
+}
+#root .nav__cont ul li .nav__link {
+  text-decoration: none;
+  font-family: "Noto Serif", serif;
+  color: #07325f;
+  font-size: 1rem;
+  transition: all ease-in 0.3s;
+}
+#root .nav__cont ul li .nav__link:hover {
+  color: #c8976c;
+  border-bottom: #c8976c 1px solid;
+  transition: all ease-in 0.3s;
+}
+#root .header__cont {
+  height: 100%;
+}
+#root .header__cont .header__bck {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/img/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+#root .header__cont .header__headline {
+  font-family: "Noto Serif", serif;
+  font-size: 23vw;
+  color: #fff;
+  text-align: center;
+  font-weight: 200;
+  opacity: 0.1;
+  transform: translateY(-10%);
+  text-shadow: #c8976c;
+  display: block;
+}
+#root .header__cont .header__image--drink {
+  position: absolute;
+  width: 45%;
+  max-width: 200px;
+  bottom: -5%;
+}
+#root .section__input {
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#root .section__input .section_i__headline {
+  font-family: "Noto Serif", serif;
+  color: #c8976c;
+  font-size: 6vw;
+}
+#root .section__input .section_i__input {
+  border: #dddddd solid 1px;
+  width: 300px;
+  height: 2rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+#root .section__input .section_i__input:focus {
+  outline: #07325f solid 1px;
+  transition: all 0.3s ease-in;
+}
+#root .section__list {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2.5rem;
+}
+#root .section__list .article__item {
+  width: 90%;
+  height: 100%;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 15px;
+  border: solid #dddddd 1px;
+  background-color: #eeeded;
+}
+#root .section__list .article__item:hover {
+  box-shadow: 3px 5px 3px #dddddd;
+}
+#root .section__list .article__item .item__img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .section__list .article__item .item__img img {
+  width: 70%;
+  border-radius: 50%;
+}
+#root .section__list .article__item .item__text {
+  width: 100%;
+  text-align: center;
+}
+#root .section__list .article__item .item__text h3 {
+  font-family: "Noto Serif", serif;
+  color: #07325f;
+  font-size: 2rem;
+}
+#root .section__list .article__item .item__text p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.5rem;
+}
+#root .section__list .article__item .item__text .item__text--alc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  margin-top: 1.2rem;
+  color: #c8976c;
+}
+#root .section__list .article__item .item__text .item__btn {
+  margin-top: 1.2rem;
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  background: #c8976c;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+#root .section__list .article__item .item__text .item__btn:hover {
+  background-color: #07325f;
+}
+#root .section__about {
+  padding: 2rem 1.5rem;
+}
+#root .section__about p {
+  font-family: "Noto Serif", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+#root .section__about .single__btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+  display: block;
+  padding: 0.65rem 1.8rem;
+  background: #c8976c;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+#root .section__about .single__btn:hover {
+  background-color: #07325f;
+}
+#root .section__single {
+  width: 100%;
+  padding: 2rem 1.5rem;
+}
+#root .section__single .single__btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1.5rem auto;
+  display: block;
+  padding: 0.65rem 1.8rem;
+  background: #c8976c;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+#root .section__single .single__btn:hover {
+  background-color: #07325f;
+}
+#root .section__single h2 {
+  font-family: "Noto Serif", serif;
+  color: #07325f;
+  font-size: 2rem;
+  color: #07325f;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+#root .section__single img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#root .section__single .single__text--box p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+#root .section__single .single__text--box p .single__text--data {
+  font-family: "Noto Serif", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 600;
+  color: #c8976c;
+}
+
+@media only screen and (min-width: 763px) {
+  #root .nav__cont ul {
+    gap: 3rem;
+    padding: 0.8rem 2rem;
+  }
+  #root .header__cont .header__bck {
+    min-height: 500px;
+    background-size: cover;
+  }
+  #root .header__cont .header__image--drink {
+    width: 35%;
+    max-width: 300px;
+    bottom: -5%;
+  }
+  #root .section__input .section_i__headline {
+    font-family: "Noto Serif", serif;
+    color: #c8976c;
+    font-size: 6vw;
+    font-size: 4.5vw;
+  }
+  #root .section__input .section_i__input {
+    border: #dddddd solid 1px;
+    width: 350px;
+    height: 2.5rem;
+  }
+  #root .section__list {
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  #root .section__list .article__item {
+    width: 100%;
+  }
+  #root .section__about {
+    padding: 4rem 2rem;
+  }
+  #root .section__single {
+    padding: 2rem 4.5rem;
+  }
+  #root .section__single .single__btn {
+    margin: 2rem auto;
+  }
+  #root .section__single h2 {
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+  }
+  #root .section__single img {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #root .nav__cont {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+  }
+  #root .nav__cont ul {
+    padding: 0.8rem 3rem;
+    gap: 4rem;
+  }
+  #root .nav__cont ul li .nav__link {
+    font-family: "Noto Serif", serif;
+    color: #07325f;
+    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  #root .header__cont {
+    height: 100%;
+  }
+  #root .header__cont .header__bck {
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+  }
+  #root .header__cont .header__image--drink {
+    max-width: 360px;
+  }
+  #root .section__input .section_i__headline {
+    font-size: 3.3vw;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  #root .section__list {
+    padding: 2rem 4rem;
+  }
+  #root .section__about {
+    padding: 2rem 4rem;
+  }
+  #root .section__about p {
+    width: 70%;
+    margin: 2.5rem auto;
+  }
+  #root .section__single {
+    padding: 2.5rem 4rem;
+    width: 100%;
+  }
+  #root .section__single h2 {
+    font-family: "Noto Serif", serif;
+    color: #07325f;
+    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-top: 3.5rem;
+  }
+  #root .section__single .single__cont--items {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+  }
+  #root .section__single .single__cont--items img {
+    width: 300px;
+    margin-bottom: 1rem;
+    flex: 0.6;
+  }
+  #root .section__single .single__cont--items .single__text--box {
+    flex: 1;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,23 @@
+@mixin font_headline {
+  font-family: $fontHeadline;
+  color: $color_secondary;
+  font-size: 6vw;
+}
+
+@mixin font_navbar {
+  font-family: $fontHeadline;
+  color: $color_primary;
+  font-size: 1rem;
+}
+
+@mixin font_item_headline {
+  font-family: $fontHeadline;
+  color: $color_primary;
+  font-size: 2rem;
+}
+
+@mixin font_primary {
+  font-family: $fontHeadline;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
